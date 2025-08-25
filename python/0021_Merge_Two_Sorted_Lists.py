@@ -18,16 +18,16 @@ def to_list(node):
         result.append(node.val)
         node = node.next
     return result
-def list_to_linked_list(lst):
-    if not lst:
-        return None
-    head = ListNode(lst[0])
-    current = head
-        for val in lst[1:]:
-        current.next = ListNode(val)
-        current = current.next
+# def list_to_linked_list(lst):
+#     if not lst:
+#         return None
+#     head = ListNode(lst[0])
+#     current = head
+#         for val in lst[1:]:
+#             current.next = ListNode(val)
+#             current = current.next
     
-    return head
+#     return head
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
         list1 = to_list(list1)
