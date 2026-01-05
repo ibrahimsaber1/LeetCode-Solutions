@@ -59,3 +59,9 @@ class Solution(object):
 # Space complexity : O(n)
 
 # --------------------------------------------------------------------------------------------------------------------------------------
+
+#3: this solution is the same as solution number 1 but it shorter
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(nums) != len(set(nums))
