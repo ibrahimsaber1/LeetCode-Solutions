@@ -53,3 +53,26 @@ class Solution(object):
                 return False
 
         return True
+    
+# ----------------------------------------
+# ----------------------------------------
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        t_map = self.create_hash_map(t)
+        s_map = self.create_hash_map(s)
+        
+        return t_map == s_map
+    
+    def create_hash_map(self, s):
+        s = sorted(list(s))
+
+        hash_map = {}
+        for i in s:
+            if i in hash_map:
+                hash_map[i] = hash_map.get(i) +1
+            else:
+                hash_map[i] = 1
+        
+        return hash_map
+    
